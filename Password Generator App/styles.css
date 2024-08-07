@@ -1,100 +1,143 @@
-*{
-    padding: 0;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
-    box-sizing: border-box;
-}
-
-.container{
+    padding: 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
     height: 100vh;
 }
 
-h1{
-    text-align: center;
-    padding: 10px;
-    background-color: rgb(186, 166, 166);
-    color: rgb(13, 11, 11);
-    border-radius: 3px;
-}
-
-.generator{
-    background-color: rgb(205, 197, 197);
-    width: 300px;
-    margin: 15px;
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    border-radius: 5px;
-}
-
-.password{
-    display: grid;
-    grid-template-columns: auto min-content;
-    border-radius: 5px;
-    /* overflow: hidden; */
-}
-
-.password input{
-    padding: 9px 10px;
-    background-color: rgb(246, 244, 250);
-    border: 0;
-}
-
-button{
-    background-color: rgb(177, 140, 238, 0.727);
-    color: 5px 15px;
-    text-transform: uppercase;
-    border: 0;
-    border-radius: 15px;
-    padding: 6px;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: rgba(147, 110, 207, 0.727);
-}
-
-.password button{
-    border-radius: 0;
-}
-
-.range{
-    display: grid;
-    grid-template-columns: auto min-content;
-    margin: 10px 0;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.range span{
-    border: 0;
-    background-color: rgb(246, 244, 250);
-    padding: 3px;
-    border-radius: 5px;
-}
-
-.options{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
-.options label{
-    display: block;
-    background-color: rgb(246, 244, 250);
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: sans-serif;
-}
-
-.generate{
+    max-width: 500px;
     width: 100%;
-    margin: 10px 0;
-    padding: 10px;
+    text-align: center;
 }
 
-.generate:hover{
+h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.generator {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.password {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.password input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.password button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.password button:hover {
+    background-color: #0056b3;
+}
+
+.range {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.range input[type="range"] {
+    flex: 1;
+    background: #ddd;
+    height: 8px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #007bff;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range span {
+    background-color: #eeeeee;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.option input[type="checkbox"] {
+    width: 24px; 
+    height: 24px; 
+    accent-color: #007bff;
+}
+
+.option label {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+
+.generate {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
     padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.generate:hover {
+    background-color: #218838;
 }
