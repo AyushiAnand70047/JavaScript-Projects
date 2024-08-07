@@ -1,18 +1,39 @@
 function generate(){
 
     let dictionary = "";
+    let password = "";
+    let count = 0;
 
     if(document.getElementById("lowercaseLetters").checked){
-        dictionary += "hbvhjvgg";
+        let character = "abcdefghijklmnopqrst";
+        dictionary += character;
+        const pos = Math.floor(Math.random() * character.length);
+        password += character[pos];
+        count++;
     }
+
     if(document.getElementById("uppercaseLetters").checked){
-        dictionary += "AYUSHINNV";
+        let character = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        dictionary += character;
+        const pos = Math.floor(Math.random() * character.length);
+        password += character[pos];
+        count++;
     }
+
     if(document.getElementById("digits").checked){
-        dictionary += "1234567890";
+        let character = "1234567890";
+        dictionary += character;
+        const pos = Math.floor(Math.random() * character.length);
+        password += character[pos];
+        count++;
     }
+
     if(document.getElementById("symbols").checked){
-        dictionary += "!@#$%^&*";
+        let character = "!@#$%^&*";
+        dictionary += character;
+        const pos = Math.floor(Math.random() * character.length);
+        password += character[pos];
+        count++;
     }
 
     const length = document.querySelector('input[type="range"]').value;
@@ -20,25 +41,24 @@ function generate(){
         return;
     }
 
-    let password = "";
-    for(let i=0;i<length;i++){
+    for(let i=count;i<length;i++){
         const pos = Math.floor(Math.random() * dictionary.length);
         password += dictionary[pos];
     }
 
-    document.querySelector('input[type="text"]').value = password;
+    // shuffle the password
+    let newPassword = password.split('');
+    for(let i=0;i<newPassword.length;i++){
+        let j = Math.floor(Math.random()*(i+1));
+        [newPassword[i],newPassword[j]] = [newPassword[j],newPassword[i]];
+    }
+
+    document.querySelector('input[type="text"]').value = newPassword.join('');
 
 }
 
-[
-    ...document.querySelectorAll('input[type="checkbox"],button.generate')
-].forEach((elem) => {
-    elem.addEventListener("click",generate);
-});
-
 document.querySelector('input[type="range"]').addEventListener('input',(e)=>{
     document.querySelector('div.range span').innerHTML = e.target.value;
-    generate();
 });
 
 document.querySelector('div.password button').addEventListener('click',()=>{
