@@ -37,9 +37,6 @@ function generate(){
     }
 
     const length = document.querySelector('input[type="range"]').value;
-    if(length < 1 || dictionary.length === 0){
-        return;
-    }
 
     for(let i=count;i<length;i++){
         const pos = Math.floor(Math.random() * dictionary.length);
@@ -70,5 +67,3 @@ document.querySelector('div.password button').addEventListener('click',()=>{
         },1000);
     });
 });
-
-generate();
