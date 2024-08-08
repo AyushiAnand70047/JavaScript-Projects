@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(219, 246, 246);
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card{
+    background-color: white;
+    padding: 36px;
+    border-radius: 12px;
+}
+
+.star{
+    font-size: 10vh;
+    cursor: pointer;
+}
+
+.one{
+    color: rgb(210, 77, 77);
+}
+
+.two{
+    color: rgb(233, 184, 92);
+}
+
+.three{
+    color: rgb(240, 240, 95);
+}
+
+.four{
+    color: rgb(223, 223, 6);
+}
+
+.five{
+    color: green;
+}

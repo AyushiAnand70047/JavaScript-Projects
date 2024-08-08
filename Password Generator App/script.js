@@ -5,7 +5,7 @@ function generate(){
     let count = 0;
 
     if(document.getElementById("lowercaseLetters").checked){
-        let character = "abcdefghijklmnopqrst";
+        let character = "abcdefghijklmnopqrstuvwxyz";
         dictionary += character;
         const pos = Math.floor(Math.random() * character.length);
         password += character[pos];
