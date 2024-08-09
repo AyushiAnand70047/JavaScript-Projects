@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.tags-input{
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 50%;
+    box-shadow: 2px 2px 5px rgb(46, 40, 40);
+}
+
+.tags-input ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tags-input li{
+    display: inline-block;
+    color: grey;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.tags-input input[type='text']{
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;  
+}
+
+.tags-input .delete-button{
+    background-color: transparent;
+    border: none;
+    color: #070707;
+    cursor: pointer;
+    margin-left: 7px;
+}

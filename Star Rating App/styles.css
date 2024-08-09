@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(219, 246, 246);
+    background-color: rgb(215, 229, 229);
 }
 
 .container{
@@ -32,17 +32,17 @@ body{
 }
 
 .two{
-    color: rgb(233, 184, 92);
+    color: rgb(240, 181, 70);
 }
 
 .three{
-    color: rgb(240, 240, 95);
+    color: rgb(239, 239, 56);
 }
 
 .four{
-    color: rgb(223, 223, 6);
+    color: rgb(196, 196, 1);
 }
 
 .five{
-    color: green;
+    color: rgb(17, 160, 17);
 }

@@ -20,7 +20,7 @@ h1{
 }
 
 .letters span:hover{
-    color: magenta;
+    color: rgb(239, 17, 106);
 }
 
 @keyframes bounce{
@@ -28,12 +28,12 @@ h1{
         transform: scale(1,1);
     }
     40%{
-        transform: scale(1.75,0.65);
+        transform: scale(1.75,0.45);
     }
     70%{
-        transform: scale(1.25,0.75);
+        transform: scale(1.55,0.65);
     }
     90%{
-        transform: scale(1.15,0.85);
+        transform: scale(1.25,0.95);
     }
 }
